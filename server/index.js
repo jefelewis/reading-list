@@ -4,6 +4,7 @@ const app = express();
 
 // Imports: GraphQL
 const graphqlHTTP = require('express-graphql');
+const schema = require('./schema/schema');
 
 // Imports: Middleware
 const morgan = require('morgan');
@@ -12,8 +13,7 @@ const bodyParser = require('body-parser');
 
 // Use: Middleware
 app.use('/graphql', graphqlHTTP({
-  // Schema
-  
+  schema
 }));
 
 // Use: Static Files
