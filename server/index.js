@@ -1,27 +1,26 @@
 // Imports: Express
-import express from 'express';
-import router from './router.js';
-
-// Imports: GraphQL
-import graphqlHTTP from express-graphql;
-
-// Initialize Express App
+const express = require('express');
 const app = express();
 
+// Imports: GraphQL
+const graphqlHTTP = require('express-graphql');
+
 // Imports: Middleware
-import morgan from 'morgan';
-import bodyParser from 'body-parser';
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
 
 // Use: Middleware
-
+app.use('/graphql', graphqlHTTP({
+  // Schema
+  
+}));
 
 // Use: Static Files
 
 
-
 // Use: Router
-app.use('./router.js');
+// app.use('./router.js');
 
 // Define: Port
 const port = 3000;
