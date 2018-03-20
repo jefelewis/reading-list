@@ -1,10 +1,10 @@
-// // Imports: React
-// import react from 'react';
-// import reactDOM from 'react-dom';
+// Imports: React
+const react = require('react');
+const reactDOM = require('react-dom');
 
 
-// // Render App
-// ReactDOM.render(
-//   <App />,
-//   document.getElementById('app')
-// );
+// Render App
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+);
