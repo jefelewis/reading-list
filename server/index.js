@@ -2,6 +2,9 @@
 import express from 'express';
 import router from './router.js';
 
+// Imports: GraphQL
+import graphqlHTTP from 'express-graphql';
+
 // Initialize Express App
 const app = express();
 
