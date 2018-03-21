@@ -13,6 +13,7 @@ const bodyParser = require('body-parser');
 
 // Use: Middleware
 app.use('/graphql', graphqlHTTP({
+  graphical: true,
   schema
 }));
 
