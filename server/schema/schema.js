@@ -14,6 +14,13 @@ let books = [
   {name: 'The Long Earth', genre: 'Sci-Fi', id: 3}
 ]
 
+let authors = [
+  {name: 'Patrick Rothfuss', age: '52', id: '1'},
+  {name: 'Brandon Sanderson', age: '42', id: '2'},
+  {name: 'Terry Pratchett', age: '66', id: '3'}
+]
+
+
 
 // GraphQL: Schema
 const BookType = new GraphQLObjectType({
