@@ -2,7 +2,7 @@
 const graphql = require('graphql');
 
 // Imports: GraphQL Packages
-const { GraphQLObjectType, GraphQLString, GraphQLSchema, GraphQLID } = graphql;
+const { GraphQLObjectType, GraphQLString, GraphQLSchema, GraphQLInt, GraphQLID } = graphql;
 
 // Imports: Lodash
 const _ = require('lodash');
@@ -21,7 +21,6 @@ let authors = [
 ]
 
 
-
 // GraphQL: Schema
 const BookType = new GraphQLObjectType({
   name: 'Book',
@@ -31,6 +30,16 @@ const BookType = new GraphQLObjectType({
     genre: {type: GraphQLString}
   })
 });
+
+const AuthorType = new GraphQLObjectType({
+  name: 'Author',
+  fields: () => ({
+    id: {type: GraphQLID},
+    name: {type: GraphQLString},
+    age: {type: GraphQLInt}
+  })
+});
+
 
 
 // GraphQL: Root Query
