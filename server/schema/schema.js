@@ -1,5 +1,5 @@
 // Imports: GraphQL
-const graphql = require('graphql');
+const GRAPHQL = require('graphql');
 
 // Imports: GraphQL Packages
 const {
@@ -9,7 +9,7 @@ const {
   GraphQLInt,
   GraphQLID,
   GraphQLList
-} = graphql;
+} = GRAPHQL;
 
 // Imports: Lodash
 const _ = require('lodash');
