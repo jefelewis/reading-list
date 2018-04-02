@@ -4,7 +4,7 @@ const APP = EXPRESS();
 
 // Imports: GraphQL
 const GRAPHQLHTTP = require('express-graphql');
-const SCHEMA = require('./schema/schema');
+const SCHEMA = require('./schema/schema.js');
 
 // Imports: Mongoose
 const MONGOOSE = require('mongoose');
@@ -25,7 +25,7 @@ MONGOOSE.connection.once('open', () => {
 // Use: Middleware
 APP.use('/graphql', GRAPHQLHTTP({
   graphiql: true,
-  SCHEMA
+  schema: SCHEMA
 }));
 
 // Use: Static Files
