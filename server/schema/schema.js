@@ -2,7 +2,14 @@
 const graphql = require('graphql');
 
 // Imports: GraphQL Packages
-const { GraphQLObjectType, GraphQLString, GraphQLSchema, GraphQLInt, GraphQLID } = graphql;
+const {
+  GraphQLObjectType,
+  GraphQLString,
+  GraphQLSchema,
+  GraphQLInt,
+  GraphQLID,
+  GraphQLList
+} = graphql;
 
 // Imports: Lodash
 const _ = require('lodash');
@@ -27,7 +34,13 @@ const BookType = new GraphQLObjectType({
   fields: () => ({
     id: {type: GraphQLID},
     name: {type: GraphQLString},
-    genre: {type: GraphQLString}
+    genre: {type: GraphQLString},
+    author: {
+      type: AuthorType,
+      resolve(parent, args) {
+        return _.find(authors, {id: parent.authorId})
+      }
+    }
   })
 });
 
@@ -48,7 +61,7 @@ const RootQuery = new GraphQLObjectType({
     book: {
       type: BookType,
       args: {id: {type: GraphQLID}},
-      resolve(parent, args){
+      resolve(parent, args) {
         // Grab data from Database/API
         return _.find(books, {id: args.id});
       }
@@ -56,7 +69,7 @@ const RootQuery = new GraphQLObjectType({
     author: {
       type: AuthorType,
       args: {id: {type: GraphQLID}},
-      resolve(parent, args){
+      resolve(parent, args) {
         // Grab data from Database/API
         return _.find(authors, {id: args.id});
       }
