@@ -1,43 +1,43 @@
 // Imports: Express
-const express = require('express');
-const app = express();
+const EXPRESS = require('express');
+const APP = EXPRESS();
 
 // Imports: GraphQL
-const graphqlHTTP = require('express-graphql');
-const schema = require('./schema/schema');
+const GRAPHQLHTTP = require('express-graphql');
+const SCHEMA = require('./schema/schema');
 
 // Imports: Mongoose
-const mongoose = require('mongoose');
+const MONGOOSE = require('mongoose');
 const MONGOURI = require('../config/mongo-uri.js');
 
 // Imports: Middleware
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
+const MORGAN = require('morgan');
+const BODYPARSER = require('body-parser');
 
 
 // Database: Connection
-mongoose.connect(MONGOURI);
-mongoose.connection.once('open', () => {
+MONGOOSE.connect(MONGOURI);
+MONGOOSE.connection.once('open', () => {
   console.log('Connected to database.');
 });
 
 
 // Use: Middleware
-app.use('/graphql', graphqlHTTP({
+APP.use('/graphql', GRAPHQLHTTP({
   graphiql: true,
-  schema
+  SCHEMA
 }));
 
 // Use: Static Files
 
 
 // Use: Router
-// app.use('./router.js');
+// APP.use('./router.js');
 
 // Define: Port
 const port = 3000;
 
 // Listener
-app.listen(port, () => {
+APP.listen(port, () => {
   console.log('The server has started on port: ' + port);
 });
