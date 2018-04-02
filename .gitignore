@@ -1,3 +1,6 @@
+# mLab MongoDB URI
+config/mongo-uri.js
+
 # Logs
 logs
 *.log
