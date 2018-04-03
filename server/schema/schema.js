@@ -68,6 +68,7 @@ const ROOTQUERY = new GraphQLObjectType({
       resolve(parent, args) {
         // Grab data from Database/API
         // return _.find(books, {id: args.id});
+        return BOOK.findById(args.id);
       }
     },
     author: {
@@ -76,18 +77,21 @@ const ROOTQUERY = new GraphQLObjectType({
       resolve(parent, args) {
         // Grab data from Database/API
         // return _.find(authors, {id: args.id});
+        return AUTHOR.findById(args.id);
       }
     },
     books: {
       type: new GraphQLList(BOOKTYPE),
       resolve(parent, args) {
-        // return books;
+        // Return ALL books
+        return BOOK.find({});
       }
     },
     authors: {
       type: new GraphQLList(AUTHORTYPE),
       resolve(parent, args) {
-        // return authors;
+        // Return ALL authors
+        return AUTHOR.find({});
       }
     }
   })
