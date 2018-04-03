@@ -19,7 +19,9 @@ const BOOK = require('../models/book.js');
 const AUTHOR = require('../models/author.js');
 
 
-// GraphQL: Schema
+
+
+/****************************** GraphQL: Schemas ******************************/
 const BOOKTYPE = new GraphQLObjectType({
   name: 'Book',
   fields: () => ({
@@ -49,9 +51,12 @@ const AUTHORTYPE = new GraphQLObjectType({
     }
   })
 });
+/****************************** GraphQL: Schemas ******************************/
 
 
-// GraphQL: Root Query
+
+
+/***************************** GraphQL: Root Query ****************************/
 const ROOTQUERY = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: () => ({
@@ -85,12 +90,16 @@ const ROOTQUERY = new GraphQLObjectType({
     }
   })
 });
+/***************************** GraphQL: Root Query ****************************/
 
 
-// GraphQL: Mutations
+
+
+/***************************** GraphQL: Mutations *****************************/
 const MUTATION = new GraphQLObjectType({
   name: 'Mutation',
   fields: () => ({
+
     // Add Author
     addAuthor: {
       type: AUTHORTYPE,
@@ -100,7 +109,7 @@ const MUTATION = new GraphQLObjectType({
       },
       resolve(parent, args) {
         // Create new instance
-        let author = new Author({
+        let author = new AUTHOR({
           name: args.name,
           age: args.age
         });
@@ -108,9 +117,34 @@ const MUTATION = new GraphQLObjectType({
         // Save new instance
         return author.save();
       }
+    },
+
+    // Add Book
+    addBook: {
+      type: BOOKTYPE,
+      args: {
+        name: { type: GraphQLString },
+        genre: { type: GraphQLString },
+        authorId: { type: GraphQLID }
+      },
+      resolve(parent, args) {
+        // Create a new instance
+        let book = new BOOK({
+          name: args.name,
+          genre: args.genre,
+          authorId: args.authorId
+        });
+        
+        // Save new instance
+        return book.save();
+      }
     }
+
   })
 });
+/***************************** GraphQL: Mutations *****************************/
+
+
 
 
 // Exports
