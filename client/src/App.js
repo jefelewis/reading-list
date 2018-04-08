@@ -9,6 +9,7 @@ class App extends Component {
     return (
         <div id="main">
           <h1>Reading List</h1>
+          <BookList />
       </div>
     );
   }
