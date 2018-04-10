@@ -1,6 +1,5 @@
 // Imports: Mongoose
-const MONGOOSE = require('mongoose');
-
+import MONGOOSE from 'mongoose';
 
 // Mongoose: Schema
 const SCHEMA = MONGOOSE.Schema;
