@@ -1,8 +1,10 @@
 // Imports: Mongoose
 import mongoose from 'mongoose';
 
+
 // Mongoose: Schema
 const SCHEMA = mongoose.Schema;
+
 
 // Schema: Book
 const BOOKSCHEMA = new SCHEMA({
@@ -13,4 +15,4 @@ const BOOKSCHEMA = new SCHEMA({
 
 
 // Exports
-module.exports = mongoose.model('Book', BOOKSCHEMA);
+export default mongoose.model('Book', BOOKSCHEMA);
