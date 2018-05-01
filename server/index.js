@@ -1,31 +1,31 @@
 // Imports: Express
-const EXPRESS = require('express');
-const APP = EXPRESS();
+import express from 'express';
+const APP = express();
 
 // Imports: GraphQL
-const GRAPHQLHTTP = require('express-graphql');
-const SCHEMA = require('./schema/schema.js');
+import graphQLHTTP from 'express-graphql';
+import schema from './schema/schema.js';
 
 // Imports: Mongoose
-const MONGOOSE = require('mongoose');
-const MONGOURI = require('../config/mongo-uri.js');
+import mongoose from 'mongoose';
+import mongoURI from '../config/mongo-uri.js';
 
 // Imports: Middleware
-const MORGAN = require('morgan');
-const BODYPARSER = require('body-parser');
+import morgan from 'morgan';
+import bodyParser from 'body-parser';
 
 
 // Database: Connection
-MONGOOSE.connect(MONGOURI);
-MONGOOSE.connection.once('open', () => {
+mongoose.connect(mongoURI);
+mongoose.connection.once('open', () => {
   console.log('Connected to database.');
 });
 
 
 // Use: Middleware
-APP.use('/graphql', GRAPHQLHTTP({
+APP.use('/graphql', graphQLHTTP({
   graphiql: true,
-  schema: SCHEMA
+  schema: schema
 }));
 
 // Use: Static Files
