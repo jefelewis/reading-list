@@ -2,6 +2,9 @@
 import express from 'express';
 const APP = express();
 
+// Imports: CORS
+import cors from 'cors';
+
 // Imports: GraphQL
 import graphQLHTTP from 'express-graphql';
 import schema from './schema/schema.js';
@@ -21,6 +24,9 @@ mongoose.connection.once('open', () => {
   console.log('Connected to database.');
 });
 
+
+// Use: CORS
+APP.use(cors())
 
 // Use: Middleware
 APP.use('/graphql', graphQLHTTP({

@@ -1,5 +1,5 @@
 // Imports: GraphQL
-const GRAPHQL = require('graphql');
+import graphQL from 'graphql';
 
 // Imports: GraphQL Packages
 const {
@@ -10,10 +10,10 @@ const {
   GraphQLID,
   GraphQLList,
   GraphQLNonNull
-} = GRAPHQL;
+} = graphQL;
 
-// Imports: Lodash
-const _ = require('lodash');
+// // Imports: Lodash
+// import _ from 'lodash';
 
 // Imports: MongoDB Models
 const BOOK = require('../models/book.js');
