@@ -1,12 +1,12 @@
 // Imports: React
-const react = require('react');
-const reactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 // Imports: CSS
-import './index.css';
+import './styles.css';
 
 // Imports: Components
-import App from './App.js';
+import App from './App.jsx';
 
 
 // Render App
