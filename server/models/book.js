@@ -1,8 +1,8 @@
 // Imports: Mongoose
-import MONGOOSE from 'mongoose';
+import mongoose from 'mongoose';
 
 // Mongoose: Schema
-const SCHEMA = MONGOOSE.Schema;
+const SCHEMA = mongoose.Schema;
 
 // Schema: Book
 const BOOKSCHEMA = new SCHEMA({
@@ -13,4 +13,4 @@ const BOOKSCHEMA = new SCHEMA({
 
 
 // Exports
-module.exports = MONGOOSE.model('Book', BOOKSCHEMA);
+module.exports = mongoose.model('Book', BOOKSCHEMA);
