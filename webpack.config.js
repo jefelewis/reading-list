@@ -4,7 +4,7 @@ const HTMLWEBPACKPLUGIN = require('html-webpack-plugin');
 
 
 // Webpack Configuration
-module.exports = {
+const CONFIG = {
   // Entry
   entry: './client/src/index.jsx',
   // Output
@@ -33,5 +33,5 @@ module.exports = {
   ]
 };
 
-// // Exports
-// module.exports = CONFIG;
+// Exports
+module.exports = CONFIG;
