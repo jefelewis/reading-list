@@ -41,9 +41,14 @@ APP.use('/graphql', graphQLHTTP({
 // APP.use('./router.js');
 
 // Define: Port
-const port = 3000;
+const PORT = 4000;
+
 
 // Listener
 APP.listen(port, () => {
-  console.log('The server has started on port: ' + port);
+  console.log('The server has started on port: ' + PORT);
 });
+
+
+// Exports
+export default APP;
