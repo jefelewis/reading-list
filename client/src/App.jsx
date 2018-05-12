@@ -27,4 +27,6 @@ class App extends Component {
     );
   }
 }
+
+// Exports
 export default App;
