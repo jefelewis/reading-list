@@ -7,11 +7,32 @@ import { graphql } from 'react-apollo';
 
 
 // Apollo: Query
-const getBooks = gql`
+const getAuthors = gql`
   {
-    books {
+    authors {
       name
       id
     }
   }
 `
+
+
+// Component: BookList
+class AddBook extends Component {
+
+  render() {
+    return (
+      <div>
+        <ul id="add-book">
+          { this.displayBooks() }
+        </ul>
+      </div>
+    );
+  }
+}
+
+
+
+
+// Exports
+export default graphql(AddBook);
