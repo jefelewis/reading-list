@@ -1,6 +1,6 @@
 // Imports: Mongoose
-import mongoose from 'mongoose';
-
+// import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 // Mongoose: Schema
 const SCHEMA = mongoose.Schema;
@@ -15,4 +15,5 @@ const BOOKSCHEMA = new SCHEMA({
 
 
 // Exports
-export default mongoose.model('Book', BOOKSCHEMA);
+// export default mongoose.model('Book', BOOKSCHEMA);
+module.exports = mongoose.model('Book', BOOKSCHEMA);
