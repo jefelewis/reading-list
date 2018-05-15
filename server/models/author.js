@@ -1,5 +1,6 @@
 // Imports: Mongoose
-import mongoose from 'mongoose';
+// import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 
 // Mongoose: Schema
@@ -14,4 +15,5 @@ const AUTHORSCHEMA = new SCHEMA({
 
 
 // Exports
-export default mongoose.model('Author', AUTHORSCHEMA);
+// export default mongoose.model('Author', AUTHORSCHEMA);
+module.exports = mongoose.model('Author', AUTHORSCHEMA);
