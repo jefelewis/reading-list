@@ -34,4 +34,4 @@ const CONFIG = {
 };
 
 // Exports
-export default CONFIG;
+module.exports = CONFIG;
