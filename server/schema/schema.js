@@ -1,5 +1,6 @@
 // Imports: GraphQL
-import graphQL from 'graphql';
+// import graphQL from 'graphql';
+const graphQL = require('graphql');
 
 // Imports: GraphQL Packages
 const {
