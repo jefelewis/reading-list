@@ -48,5 +48,5 @@ class BookList extends Component {
 }
 
 
-// Exports
+// Exports (Binding the getBooks query with the BookList component)
 export default graphql(getBooks)(BookList);
