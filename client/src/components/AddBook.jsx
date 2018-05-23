@@ -42,6 +42,8 @@ class AddBook extends Component {
           </select>
         </div>  
 
+        <button>Add Book</button>
+
       </form>
     );
   }
@@ -50,5 +52,5 @@ class AddBook extends Component {
 
 
 
-// Exports
-export default graphql(AddBook);
+// Exports (Binding the getAuthors query with the AddBook component)
+export default graphql(getAuthors)(AddBook);
