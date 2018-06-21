@@ -21,7 +21,7 @@ const getAuthors = gql`
 // Component: BookList
 class AddBook extends Component {
 
-  // 
+  // Function: Display all authors
   displayAuthors(){
     let data = this.props.data;
 
