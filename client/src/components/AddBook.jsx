@@ -25,6 +25,7 @@ class AddBook extends Component {
   displayAuthors(){
     let data = this.props.data;
 
+    // Check to see if data is loading
     if(data.loading){
       return(<option disabled>Loading Authors...</option>)
     }
