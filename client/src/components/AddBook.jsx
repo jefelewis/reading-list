@@ -2,20 +2,10 @@
 import React, { Component } from 'react';
 
 // Imports: Apollo
-import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
-import { format } from 'url';
 
-
-// Apollo: Query
-const getAuthors = gql`
-  {
-    authors {
-      name
-      id
-    }
-  }
-`
+// Imports: getAuthors Query
+import { getAuthors } from '../queries/queries.js';
 
 
 // Component: BookList
@@ -37,6 +27,7 @@ class AddBook extends Component {
     }
   }
 
+  // Render
   render() {
     return (
       <form id="add-book">
@@ -70,4 +61,5 @@ class AddBook extends Component {
 
 
 // Exports (Binding the getAuthors query with the AddBook component)
+// graphql(Query)(Component)
 export default graphql(getAuthors)(AddBook);
