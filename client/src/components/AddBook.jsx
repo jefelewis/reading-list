@@ -37,6 +37,11 @@ class AddBook extends Component {
     }
   }
 
+  // Function: Submit Form
+  submitForm(e){
+    e.preventDefault()
+  }
+
   // Render
   render() {
     return (
