@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 
 // Imports: getBooks Query
-import { getBooks } from '../queries/queries.js';
+import { getBooksQuery } from '../queries/queries.js';
 
 
 // Component: BookList
@@ -42,4 +42,4 @@ class BookList extends Component {
 
 // Exports (Binding the getBooks query with the BookList component)
 // graphql(Query)(Component)
-export default graphql(getBooks)(BookList);
+export default graphql(getBooksQuery)(BookList);

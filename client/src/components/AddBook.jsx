@@ -5,13 +5,13 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 
 // Imports: getAuthors Query
-import { getAuthors } from '../queries/queries.js';
+import { getAuthorsQuery } from '../queries/queries.js';
 
 
 // Component: BookList
 class AddBook extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -39,7 +39,9 @@ class AddBook extends Component {
 
   // Function: Submit Form
   submitForm(e){
+    // Prevents the page from reloading so the console data doesn't disappear
     e.preventDefault()
+    console.log('Submit Form State', this.state)
   }
 
   // Render
@@ -85,4 +87,4 @@ class AddBook extends Component {
 
 // Exports (Binding the getAuthors query with the AddBook component)
 // graphql(Query)(Component)
-export default graphql(getAuthors)(AddBook);
+export default graphql(getAuthorsQuery)(AddBook);
