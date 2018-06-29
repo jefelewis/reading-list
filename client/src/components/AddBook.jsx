@@ -2,10 +2,10 @@
 import React, { Component } from 'react';
 
 // Imports: Apollo
-import { graphql } from 'react-apollo';
+import { graphql, compose } from 'react-apollo';
 
 // Imports: getAuthors Query
-import { getAuthorsQuery } from '../queries/queries.js';
+import { getAuthorsQuery, addBookMutation } from '../queries/queries.js';
 
 
 // Component: BookList
@@ -22,11 +22,11 @@ class AddBook extends Component {
   }
 
   // Function: Display all authors
-  displayAuthors(){
-    let data = this.props.data;
+  displayAuthors() {
+    let data = this.props.getAuthorsQuery;
 
     // Check to see if data is loading
-    if(data.loading){
+    if(data.loading) {
       return(<option disabled>Loading Authors...</option>)
     }
     // Map authors to options list
@@ -38,7 +38,7 @@ class AddBook extends Component {
   }
 
   // Function: Submit Form
-  submitForm(e){
+  submitForm(e) {
     // Prevents the page from reloading so the console data doesn't disappear
     e.preventDefault()
     console.log('Submit Form State', this.state)
@@ -87,4 +87,9 @@ class AddBook extends Component {
 
 // Exports (Binding the getAuthors query with the AddBook component)
 // graphql(Query)(Component)
-export default graphql(getAuthorsQuery)(AddBook);
+export default compose(
+  graphql(getAuthorsQuery, { name:"getAuthorsQuery" }),
+  graphql(addBookMutation, { name: "addBookMutation" })
+)(AddBook)
+ 
+
