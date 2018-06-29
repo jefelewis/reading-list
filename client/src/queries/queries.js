@@ -29,11 +29,11 @@ const addBookMutation = gql`
           id
       }
   }
-
 `
 
 // Exports
 export { 
     getBooksQuery,
-    getAuthorsQuery
+    getAuthorsQuery,
+    addBookMutation
  };

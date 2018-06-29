@@ -12,7 +12,7 @@ import { getBooksQuery } from '../queries/queries.js';
 class BookList extends Component {
 
   // Function: Display all books
-  displayBooks()  {
+  displayBooks() {
     let data = this.props.data;
 
     if(data.loading) {
