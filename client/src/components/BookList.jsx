@@ -2,19 +2,10 @@
 import React, { Component } from 'react';
 
 // Imports: Apollo
-import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
 
-
-// Apollo: Query
-const getBooks = gql`
-  {
-    books {
-      name
-      id
-    }
-  }
-`
+// Imports: getBooks Query
+import { getBooks } from '../queries/queries.js';
 
 
 // Component: BookList
@@ -36,6 +27,7 @@ class BookList extends Component {
     }
   }
 
+  // Render
   render() {
     return (
       <div>
