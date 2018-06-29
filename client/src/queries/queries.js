@@ -1,5 +1,7 @@
 // Imports: Apollo
 import { gql } from 'apollo-boost';
+import { graphql } from 'react-apollo';
+
 
 
 // Query: Retrieve all Books
@@ -24,7 +26,7 @@ const getAuthors = gql`
 
 
 // Exports
-export default { 
+export { 
     getBooks,
     getAuthors
  };
