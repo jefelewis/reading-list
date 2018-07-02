@@ -42,7 +42,13 @@ class AddBook extends Component {
     // Prevents the page from reloading so the console data doesn't disappear
     e.preventDefault()
     console.log('Submit Form State', this.state)
-    this.props.addBookMutation();
+    this.props.addBookMutation({
+      variables: {
+        name: this.state.name,
+        genre: this.state.genre,
+        authorId: this.state.authorId
+      }
+    });
   }
 
   // Render
