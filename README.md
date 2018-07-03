@@ -5,15 +5,16 @@ Reading List using React, Express, Node.js, and GraphQL
 ## Description
 
 
-## Technologies
-React
-Node.js/Express
-GraphQL
-mLab
+## Tech Stack
+- React
+- Node.js
+- Express
+- GraphQL
+- mLab (Switching to Postgres)
 
 ## Run the Application
-npm start
-npm run server
+- npm start
+- npm run server
 
 ## Building the Application
 npm build
