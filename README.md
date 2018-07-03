@@ -5,7 +5,7 @@ A list of favorite Books
 
 ## Tech Stack
 - React
-- React-Apollo/Apollo Client
+- React-Apollo/Apollo-Boost
 - Webpack
 - Babel
 - Node.js
