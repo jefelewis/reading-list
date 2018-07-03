@@ -1,9 +1,9 @@
 // Imports: Apollo
 import { gql } from 'apollo-boost';
 
-// Query: Retrieve a single boo
+// Query: Retrieve a single book
 const getBookQuery = gql`
-  query($id: String) {
+  query($id: ID) {
     book(id: $id) {
       name
       id
