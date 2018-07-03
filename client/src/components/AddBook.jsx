@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { graphql, compose } from 'react-apollo';
 
 // Imports: getAuthors Query
-import { getAuthorsQuery, addBookMutation } from '../queries/queries.js';
+import { getAuthorsQuery, addBookMutation, getBooksQuery } from '../queries/queries.js';
 
 
 // Component: BookList
@@ -47,7 +47,9 @@ class AddBook extends Component {
         name: this.state.name,
         genre: this.state.genre,
         authorId: this.state.authorId
-      }
+      },
+      // Refetch query after book has been added to the database
+      refetchQueries: [{ query: getBooksQuery }]
     });
   }
 
