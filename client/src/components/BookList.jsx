@@ -8,7 +8,7 @@ import { graphql } from 'react-apollo';
 import { getBooksQuery } from '../queries/queries.js';
 
 // Imports: Components
-import BookDetails from './BookDetails.js';
+import BookDetails from './BookDetails';
 
 
 // Component: BookList
