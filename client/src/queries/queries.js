@@ -1,6 +1,26 @@
 // Imports: Apollo
 import { gql } from 'apollo-boost';
 
+// Query: Retrieve a single boo
+const getBookQuery = gql`
+  query($id: String) {
+    book(id: $id) {
+      name
+      id
+      genre
+      author {
+        id
+        name
+        age
+        books {
+          name
+          id
+        }
+      }
+    }
+  }
+`
+
 // Query: Retrieve all Books
 const getBooksQuery = gql`
   {
@@ -33,6 +53,7 @@ const addBookMutation = gql`
 
 // Exports
 export { 
+    getBookQuery,
     getBooksQuery,
     getAuthorsQuery,
     addBookMutation
