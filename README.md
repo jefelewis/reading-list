@@ -1,12 +1,12 @@
 # reading-list
-Reading List using React, Express, Node.js, and GraphQL
-
 
 ## Description
-
+A list of favorite Books
 
 ## Tech Stack
 - React
+- Webpack
+- Babel
 - Node.js
 - Express
 - GraphQL
@@ -17,7 +17,7 @@ Reading List using React, Express, Node.js, and GraphQL
 - npm run server
 
 ## Building the Application
-npm build
+- npm build
 
 ## Testing the Application
-npm test
+- npm test
