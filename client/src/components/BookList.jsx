@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 // Imports: Apollo
 import { graphql } from 'react-apollo';
 
-// Imports: getBooks Query
+// Imports: Apollo Queries
 import { getBooksQuery } from '../queries/queries.js';
 
 
