@@ -24,4 +24,4 @@ class BookDetails extends Component {
 
 // Exports (Binding the getBooks query with the BookList component)
 // graphql(Query)(Component)
-export default(getBookQuery)(BookDetails);
+export default graphql(getBookQuery)(BookDetails);
