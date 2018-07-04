@@ -19,7 +19,7 @@ class BookList extends Component {
 
     this.state = {
       selectedBook: null
-    };
+    }; 
   }
 
   // Function: Display all books
@@ -30,7 +30,7 @@ class BookList extends Component {
       return(<div>Loading Books...</div>)
     }
     else {
-      return data.books.map(book => {
+      return data.books.map((book) => {
         return(
           <li key={ book.id } onClick={ (e) => { this.setState( {selectedBook: book.id })}}>{ book.name }</li>
         );
@@ -45,7 +45,7 @@ class BookList extends Component {
         <ul id="book-list">
           { this.displayBooks() }
         </ul>
-        <BookDetails book={ this.state.selectedBook }/>
+        <BookDetails bookId={ this.state.selectedBook }/>
       </div>
     );
   }
