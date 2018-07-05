@@ -2,9 +2,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Imports: CSS
-import './styles.css';
-
 // Imports: Components
 import App from './App.jsx';
 
