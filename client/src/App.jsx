@@ -9,6 +9,9 @@ import { ApolloProvider } from 'react-apollo';
 import BookList from './components/BookList.jsx';
 import AddBook from './components/AddBook.jsx';
 
+// Imports: CSS
+import './css/styles.css';
+
 // Setup: Apollo
 const CLIENT = new ApolloClient({
   uri: 'http://localhost:4000/graphql'
