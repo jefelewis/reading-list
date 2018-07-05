@@ -41,16 +41,23 @@ class AddBook extends Component {
   submitForm(e) {
     // Prevents the page from reloading so the console data doesn't disappear
     e.preventDefault()
-    console.log('Submit Form State', this.state)
-    this.props.addBookMutation({
-      variables: {
-        name: this.state.name,
-        genre: this.state.genre,
-        authorId: this.state.authorId
-      },
-      // Refetch query after book has been added to the database
-      refetchQueries: [{ query: getBooksQuery }]
-    });
+
+    // Check if all form fields are filled out
+    if ((this.state.name || this.state.genre || this.state.authorId) !== '') {
+      console.log('Submit Form State', this.state)
+      this.props.addBookMutation({
+        variables: {
+          name: this.state.name,
+          genre: this.state.genre,
+          authorId: this.state.authorId
+        },
+        // Refetch query after book has been added to the database
+        refetchQueries: [{ query: getBooksQuery }]
+      });
+    }
+    else {
+      alert('Please add a Book Title, Genre, and Author.');
+    }
   }
 
   // Render
