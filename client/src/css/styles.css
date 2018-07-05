@@ -1,0 +1,14 @@
+.app {
+    background: #eee;
+    font-family: "Arial";
+}
+
+#main h1 {
+}
+
+#main {
+    padding: 0px;
+    box-sizing: border-box;
+    width: 60%;
+    height: 100%;
+}
