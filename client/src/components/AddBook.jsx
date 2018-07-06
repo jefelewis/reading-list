@@ -52,7 +52,9 @@ class AddBook extends Component {
           authorId: this.state.authorId
         },
         // Refetch query after book has been added to the database
-        refetchQueries: [{ query: getBooksQuery }]
+        refetchQueries: [{ 
+          query: getBooksQuery
+        }]
       });
     }
     else {
