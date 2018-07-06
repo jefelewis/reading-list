@@ -71,6 +71,7 @@ class AddBook extends Component {
           <label>Book Title:</label>
           <input
             type="text"
+            placeholder="Book Title"
             onChange={ (e) => this.setState({ name: e.target.value })}
           />
         </div>
@@ -79,6 +80,7 @@ class AddBook extends Component {
           <label>Genre:</label>
           <input
             type="text"
+            placeholder="Genre"
             onChange={ (e) => this.setState({ genre: e.target.value })}
           />
         </div>      
