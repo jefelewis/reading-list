@@ -57,6 +57,7 @@ class AddBook extends Component {
         }]
       });
     }
+    // Alert user to complete form fields
     else {
       alert('Please add a Book Title, Genre, and Author.');
     }
