@@ -37,12 +37,8 @@ mongoose.connect(
       console.log('Unable to connect to the server. Error: ', err);
     }
     else {
-      console.log('Connected to Server successfully!');
+      console.log('Connected to Database.');
     }
-});
-
-mongoose.connection.once('open', () => {
-  console.log('Connected to database.');
 });
 
 
