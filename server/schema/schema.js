@@ -13,8 +13,8 @@ const {
 } = graphQL;
 
 // Imports: MongoDB Schema
-const BOOK = require('../mongoose-models/book.js');
-const AUTHOR = require('../mongoose-models/author.js');
+const BOOK = require('../mongoose-models/bookschema.js');
+const AUTHOR = require('../mongoose-models/authorschema.js');
 
 
 
