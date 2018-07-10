@@ -28,7 +28,19 @@ const bodyParser = require('body-parser');
 
 
 // Database: Connection
-mongoose.connect(mongoURI);
+mongoose.connect(
+  mongoURI,
+  { useNewUrlParser: true },
+  // Error Handling
+  (err, db) => {
+    if(err){
+      console.log('Unable to connect to the server. Error: ', err);
+    }
+    else {
+      console.log('Connected to Server successfully!');
+    }
+});
+
 mongoose.connection.once('open', () => {
   console.log('Connected to database.');
 });
