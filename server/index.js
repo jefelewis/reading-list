@@ -1,28 +1,19 @@
 // Imports: Express
-// import express from 'express';
 const express = require('express');
-
 const APP = express();
 
 // Imports: CORS
-// import cors from 'cors';
 const cors = require('cors');
 
 // Imports: GraphQL
-// import graphQLHTTP from 'express-graphql';
-// import schema from './schema/schema.js';
 const graphQLHTTP = require('express-graphql');
 const schema = require('./schema/schema.js');
 
 // Imports: Mongoose
-// import mongoose from 'mongoose';
-// import mongoURI from '../config/mongo-uri.js';
 const mongoose = require('mongoose');
 const mongoURI = require('../config/mongo-uri.js');
 
 // Imports: Middleware
-// import morgan from 'morgan';
-// import bodyParser from 'body-parser';
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
@@ -32,8 +23,8 @@ mongoose.connect(
   mongoURI,
   { useNewUrlParser: true },
   // Error Handling
-  (err, db) => {
-    if(err){
+  (err) => {
+    if(err) {
       console.log('Unable to connect to the server. Error: ', err);
     }
     else {
@@ -54,19 +45,14 @@ APP.use('/graphql', graphQLHTTP({
 // Use: Static Files
 
 
-// Use: Router
-// APP.use('./router.js');
-
-// Define: Port
+// Express: Port
 const PORT = 4000 || process.env;
 
-
-// Listener
+// Express: Listener
 APP.listen(PORT, () => {
   console.log('The server has started on port: ' + PORT);
 });
 
 
 // Exports
-// export default APP;
 module.exports = APP;
