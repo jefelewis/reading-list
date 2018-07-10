@@ -1,5 +1,4 @@
 // Imports: GraphQL
-// import graphQL from 'graphql';
 const graphQL = require('graphql');
 
 // Imports: GraphQL Packages
@@ -13,12 +12,9 @@ const {
   GraphQLNonNull
 } = graphQL;
 
-// // Imports: Lodash
-// import _ from 'lodash';
-
-// Imports: MongoDB Models
-const BOOK = require('../models/book.js');
-const AUTHOR = require('../models/author.js');
+// Imports: MongoDB Schema
+const BOOK = require('../mongoose-models/book.js');
+const AUTHOR = require('../mongoose-models/author.js');
 
 
 
