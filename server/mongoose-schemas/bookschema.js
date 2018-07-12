@@ -1,9 +1,9 @@
 // Imports: Mongoose
-const mongoose = require('mongoose');
+const MONGOOSE = require('mongoose');
 
 
 // Mongoose: Schema
-const SCHEMA = mongoose.Schema;
+const SCHEMA = MONGOOSE.Schema;
 
 // Mongoose: Book Schema
 const BOOKSCHEMA = new SCHEMA({
@@ -14,4 +14,4 @@ const BOOKSCHEMA = new SCHEMA({
 
 
 // Exports
-module.exports = mongoose.model('Book', BOOKSCHEMA);
+module.exports = MONGOOSE.model('Book', BOOKSCHEMA);
