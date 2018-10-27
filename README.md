@@ -10,6 +10,7 @@
 * [Apollo Server 1](https://www.apollographql.com/docs/apollo-server) - GraphQL Server
 * [Node.js](https://nodejs.org/en) - JavaScript Runtime Environment
 * [Express](https://expressjs.com) - Web Framework
+* [mLab](https://mlab.com) - Database
 * [Axios](https://www.npmjs.com/package/axios) - HTTP Requests
 * [Webpack 4](https://webpack.js.org) - Module Bundler
 * [Babel 7](https://babeljs.io) - Transpiler/Transcompiler
@@ -18,7 +19,6 @@
 ## Getting Started
 **Prerequisites:**
 * [Install Node.js](https://nodejs.org/en/download/)
-* [Install MongoDB](https://docs.mongodb.com/manual/installation/)
 
 **1. Install Dependencies:**
 ```
