@@ -1,24 +1,36 @@
-# reading-list
+# Reading List
 
-## Description
-A list of favorite Books
+*  [Built With](#built-with)
+*  [Getting Started](#getting-started)
 
-## Tech Stack
-- React
-- React-Apollo/Apollo-Boost
-- Webpack
-- Babel
-- Node.js
-- Express
-- GraphQL
-- mLab (Switching to Postgres)
+## Built With
+* [React](https://reactjs.org) - Frontend Framework
+* [GraphQL](https://graphql.org) - Query Language
+* [Apollo Boost](https://github.com/apollographql/apollo-client/tree/master/packages/apollo-boost) - GraphQL Client
+* [Apollo Server 1](https://www.apollographql.com/docs/apollo-server) - GraphQL Server
+* [Node.js](https://nodejs.org/en) - JavaScript Runtime Environment
+* [Express](https://expressjs.com) - Web Framework
+* [Axios](https://www.npmjs.com/package/axios) - HTTP Requests
+* [Webpack 4](https://webpack.js.org) - Module Bundler
+* [Babel 7](https://babeljs.io) - Transpiler/Transcompiler
+* [ESLint](https://eslint.org) - Linter
 
-## Run the Application
-- npm start
-- npm run server
+## Getting Started
+**Prerequisites:**
+* [Install Node.js](https://nodejs.org/en/download/)
+* [Install MongoDB](https://docs.mongodb.com/manual/installation/)
 
-## Building the Application
-- npm build
+**1. Install Dependencies:**
+```
+npm install
+```
 
-## Testing the Application
-- npm test
+**2. Start Node.js Server:**
+```
+npm run server
+```
+
+**3. Start Webpack Development Server:**
+```
+npm start
+```
