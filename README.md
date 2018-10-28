@@ -6,7 +6,7 @@
 * [React](https://reactjs.org) - Frontend Framework
 * [GraphQL](https://graphql.org) - Query Language
 * [Apollo Boost](https://github.com/apollographql/apollo-client/tree/master/packages/apollo-boost) - GraphQL Client
-* [Apollo Server 1](https://www.apollographql.com/docs/apollo-server) - GraphQL Server
+* [Express GraphQL](https://github.com/graphql/express-graphql) - GraphQL Server
 * [Node.js](https://nodejs.org/en) - JavaScript Runtime Environment
 * [Express](https://expressjs.com) - Web Framework
 * [mLab](https://mlab.com) - Database
