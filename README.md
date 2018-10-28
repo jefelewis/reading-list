@@ -9,7 +9,8 @@
 * [Express GraphQL](https://github.com/graphql/express-graphql) - GraphQL Server
 * [Node.js](https://nodejs.org/en) - JavaScript Runtime Environment
 * [Express](https://expressjs.com) - Web Framework
-* [mLab](https://mlab.com) - Database
+* [MongoDB](https://www.mongodb.com) - Non Relational Database
+* [Mongoose](https://mongoosejs.com) - MongoDB Object Modeling Tool
 * [Axios](https://www.npmjs.com/package/axios) - HTTP Requests
 * [Webpack 4](https://webpack.js.org) - Module Bundler
 * [Babel 7](https://babeljs.io) - Transpiler/Transcompiler
@@ -32,4 +33,12 @@ npm run server
 **3. Start Webpack Development Server:**
 ```
 npm start
+```
+**4. Start Mongodb Daemon (Background Process):**
+```
+mongod
+```
+**5. Start Mongodb Shell (Where The Commands Are Executed):**
+```
+mongo
 ```
