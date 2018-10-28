@@ -4,7 +4,7 @@
   "description": "Reading List using React, Express, Node.js, GraphQL, and MongoDB",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot",
+    "start": "webpack-dev-server --mode development --progress --hot=true",
     "server": "nodemon --exec babel-node ./server/server.js",
     "build": "webpack --mode production",
     "test": "jest"
