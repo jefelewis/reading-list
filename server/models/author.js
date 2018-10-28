@@ -1,7 +1,7 @@
 // Imports: Dependencies
 import mongoose from 'mongoose';
 
-// Mongoose: Author Schema
+// Mongoose: Author Model
 const AUTHOR = new mongoose.Schema({
   name: { type: String, required: true, trim: true },
   age: { type: Number, required: true, trim: true },
