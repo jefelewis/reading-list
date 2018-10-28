@@ -1,16 +1,10 @@
-// Imports: React
+// Imports: Dependencies
 import React, { Component } from 'react';
-
-// Imports: Apollo
 import { graphql, compose } from 'react-apollo';
-
-// Imports: Apollo Queries
 import { getAuthorsQuery, addBookMutation, getBooksQuery } from '../queries/queries.js';
 
-
-// Component: BookList
+// Component: Add Book
 class AddBook extends Component {
-
   constructor(props) {
     super(props);
 
@@ -21,7 +15,7 @@ class AddBook extends Component {
     };
   }
 
-  // Function: Display all authors
+  // Display all authors
   displayAuthors() {
     let data = this.props.getAuthorsQuery;
 
@@ -37,7 +31,7 @@ class AddBook extends Component {
     }
   }
 
-  // Function: Submit Form
+  // Submit Form
   submitForm(e) {
     // Prevents the page from reloading so the console data doesn't disappear
     e.preventDefault()
@@ -103,14 +97,9 @@ class AddBook extends Component {
   }
 }
 
-
-
-
 // Exports (Binding the getAuthors query with the AddBook component)
 // graphql(Query)(Component)
 export default compose(
   graphql(getAuthorsQuery, { name:"getAuthorsQuery" }),
   graphql(addBookMutation, { name: "addBookMutation" })
 )(AddBook)
- 
-

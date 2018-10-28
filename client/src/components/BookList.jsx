@@ -1,19 +1,15 @@
-// Imports: React
+// Imports: Dependencies
 import React, { Component } from 'react';
-
-// Imports: Apollo
 import { graphql } from 'react-apollo';
 
 // Imports: Apollo Queries
-import { getBooksQuery } from '../queries/queries.js';
+import { getBooksQuery } from '../queries/queries';
 
 // Imports: Components
 import BookDetails from './BookDetails.jsx';
 
-
-// Component: BookList
+// Component: Book List
 class BookList extends Component {
-
   constructor(props) {
     super(props);
 
@@ -32,7 +28,10 @@ class BookList extends Component {
     else {
       return data.books.map((book) => {
         return(
-          <li key={ book.id } onClick={ (e) => { this.setState( {selectedBook: book.id })}}>{ book.name }</li>
+          <li
+            key={ book.id }
+            onClick={ (e) => {this.setState( {selectedBook: book.id })}}
+          >{ book.name }</li>
         );
       })
     }
@@ -50,7 +49,6 @@ class BookList extends Component {
     );
   }
 }
-
 
 // Exports (Binding the getBooks query with the BookList component)
 // graphql(Query)(Component)

@@ -1,17 +1,11 @@
-// Imports: React
+// Imports: Dependencies
 import React, { Component } from 'react';
-
-// Imports: Apollo
 import { graphql } from 'react-apollo';
-
-// Imports: Apollo Queries
 import { getBookQuery } from '../queries/queries.js';
 
-
-// Component: BookDetails
+// Component: Book Details
 class BookDetails extends Component {
-
-  // Function: Display details from a given book
+  // Display details from a given book
   displayBookDetails() {
     const { book } = this.props.data;
 
@@ -46,7 +40,6 @@ class BookDetails extends Component {
     )
   }
 }
-
 
 // Exports (Binding the getBooks query with the BookList component)
 // graphql(Query)(Component)
