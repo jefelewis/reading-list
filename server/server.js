@@ -1,25 +1,21 @@
-// Imports: Express
-const EXPRESS = require('express');
-const APP = EXPRESS();
-
-// Imports: CORS
-const CORS = require('cors');
+// Imports: Dependencies
+import express from 'express';
+import mongoose from 'mongoose'
+import GRAPHQLHTTP from 'express-graphql';
+import cors from 'cors';
+import opn from 'opn';
 
 // Imports: GraphQL
-const GRAPHQLHTTP = require('express-graphql');
-const SCHEMA = require('./graphql-schemas/schema.js');
+import SCHEMA from './graphql-schemas/schema';
 
-// Imports: Mongoose
-const MONGOOSE = require('mongoose');
-const MONGOURI = require('../config/mongo-uri.js');
+// Imports: MongoDB
+import MONGOURI from '../config/mongo-uri';
 
-// Imports: Middleware
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
+// Express App
+const APP = express();
 
-
-// Database: Connection
-MONGOOSE.connect(
+// MongoDB
+mongoose.connect(
   MONGOURI,
   { useNewUrlParser: true },
   // Error Handling
@@ -32,18 +28,14 @@ MONGOOSE.connect(
     }
 });
 
+// Middleware: CORS
+APP.use(cors())
 
-// Use: CORS
-APP.use(CORS())
-
-// Use: Middleware
+// Middleware: GraphQL
 APP.use('/graphql', GRAPHQLHTTP({
   graphiql: true,
   schema: SCHEMA
 }));
-
-// Use: Static Files
-
 
 // Express: Port
 const PORT = 4000 || process.env;
@@ -51,8 +43,11 @@ const PORT = 4000 || process.env;
 // Express: Listener
 APP.listen(PORT, () => {
   console.log(`The server has started on port: ${PORT}`);
+  console.log(`http://localhost:${PORT}/graphql`);
 });
 
+// Open URL On Server Start
+opn(`http://localhost:${PORT}/graphql`);
 
 // Exports
-module.exports = APP;
+export default APP;
