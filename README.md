@@ -19,6 +19,7 @@
 ## Getting Started
 **Prerequisites:**
 * [Install Node.js](https://nodejs.org/en/download/)
+* [Install MongoDB](https://docs.mongodb.com/manual/installation/)
 
 **1. Install Dependencies:**
 ```
