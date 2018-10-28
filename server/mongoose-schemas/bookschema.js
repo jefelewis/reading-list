@@ -1,17 +1,15 @@
-// Imports: Mongoose
-const MONGOOSE = require('mongoose');
-
+// Imports: Dependencies
+import mongoose from 'mongoose';
 
 // Mongoose: Schema
-const SCHEMA = MONGOOSE.Schema;
+const SCHEMA = mongoose.Schema;
 
 // Mongoose: Book Schema
-const BOOKSCHEMA = new SCHEMA({
-  name: {type: String, required: true},
-  genre: {type: String, required: true},
-  authorId: {type: String, required: true},
+const BOOK = new SCHEMA({
+  name: { type: String, required: true },
+  genre: { type: String, required: true },
+  authorId: { type: String, required: true },
 });
 
-
 // Exports
-module.exports = MONGOOSE.model('Book', BOOKSCHEMA);
+module.exports = mongoose.model('Book', BOOK);

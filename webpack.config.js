@@ -10,35 +10,35 @@ const CONFIG = {
   // Output
   output: {
     path: PATH.join(__dirname, './client/dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   // Loaders
   module: {
-    rules : [
+    rules: [
       // JavaScript/JSX Files
       {
         test: /\.jsx$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: 'babel-loader',
       },
       // CSS Files
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
       // Image Files
       {
         test: /\.(png|jpg|gif|svg)$/,
-        use: 'file-loader'
-      }
-    ]
+        use: 'file-loader',
+      },
+    ],
   },
   // Plugins
   plugins: [
     new HTMLWEBPACKPLUGIN({
-      template: './client/src/index.html'
-    })
-  ]
+      template: './client/src/index.html',
+    }),
+  ],
 };
 
 // Exports

@@ -1,6 +1,6 @@
 // Imports: Dependencies
 import express from 'express';
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 import GRAPHQLHTTP from 'express-graphql';
 import cors from 'cors';
 import opn from 'opn';
@@ -20,21 +20,22 @@ mongoose.connect(
   { useNewUrlParser: true },
   // Error Handling
   (err) => {
-    if(err) {
+    if (err) {
       console.log(`Unable to connect to the Database. Error: ${err}`);
     }
     else {
-      console.log(`Connected to Database.`);
+      console.log('Connected to Database.');
     }
-});
+  },
+);
 
 // Middleware: CORS
-APP.use(cors())
+APP.use(cors());
 
 // Middleware: GraphQL
 APP.use('/graphql', GRAPHQLHTTP({
   graphiql: true,
-  schema: SCHEMA
+  schema: SCHEMA,
 }));
 
 // Express: Port
