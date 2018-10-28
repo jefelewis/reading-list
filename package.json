@@ -14,7 +14,7 @@
     "url": "git+https://github.com/jefelewis/reading-list.git"
   },
   "author": "Jeff Lewis",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jefelewis/reading-list/issues"
   },
