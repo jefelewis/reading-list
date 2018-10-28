@@ -8,20 +8,19 @@ import opn from 'opn';
 // Imports: GraphQL
 import SCHEMA from './graphql-schemas/schema';
 
-// Imports: MongoDB
-import MONGOURI from '../config/mongo-uri';
-
 // Express App
 const APP = express();
 
-// MongoDB
+// MongoDB: URI
+const MONGOURI = 'mongodb://localhost/ReadingList';
+
+// MongoDB: Database Connection
 mongoose.connect(
   MONGOURI,
   { useNewUrlParser: true },
-  // Error Handling
-  (err) => {
-    if (err) {
-      console.log(`Unable to connect to the Database. Error: ${err}`);
+  (error) => {
+    if (error) {
+      console.log(`Unable to connect to the Database. Error: ${error}`);
     }
     else {
       console.log('Connected to Database.');
