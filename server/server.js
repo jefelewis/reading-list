@@ -6,7 +6,7 @@ import cors from 'cors';
 import opn from 'opn';
 
 // Imports: GraphQL
-import SCHEMA from './graphql-schemas/schema';
+import SCHEMA from './graphql/schema';
 
 // Express App
 const APP = express();

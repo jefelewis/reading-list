@@ -10,8 +10,8 @@ import {
 } from 'graphql';
 
 // Imports: MongoDB Schema
-const BOOK = require('../mongoose-schemas/bookschema');
-const AUTHOR = require('../mongoose-schemas/authorschema');
+import BOOK from '../models/book';
+import AUTHOR from '../models/author';
 
 // GRAPHQL TYPES
 // Book Type
