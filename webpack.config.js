@@ -1,15 +1,15 @@
 // Imports: Dependencies
-const PATH = require('path');
-const HTMLWEBPACKPLUGIN = require('html-webpack-plugin');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 require('@babel/register');
 
 // Webpack Configuration
-const CONFIG = {
+const config = {
   // Entry
   entry: './client/src/index.jsx',
   // Output
   output: {
-    path: PATH.join(__dirname, './client/dist'),
+    path: path.resolve(__dirname, './client/dist'),
     filename: 'bundle.js',
   },
   // Loaders
@@ -35,7 +35,7 @@ const CONFIG = {
   },
   // Plugins
   plugins: [
-    new HTMLWEBPACKPLUGIN({
+    new HtmlWebpackPlugin({
       template: './client/src/index.html',
     }),
   ],
@@ -46,4 +46,4 @@ const CONFIG = {
 };
 
 // Exports
-module.exports = CONFIG;
+module.exports = config;
