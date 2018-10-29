@@ -35,6 +35,7 @@ const config = {
   },
   // Plugins
   plugins: [
+    // Generates A HTML File From Your Template Index.html To Serve Up App
     new HtmlWebpackPlugin({
       template: './client/src/index.html',
     }),
